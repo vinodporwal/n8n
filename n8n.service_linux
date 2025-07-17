@@ -1,0 +1,12 @@
+[Unit]
+Description=n8n Workflow Automation
+After=network.target
+
+[Service]
+ExecStart=/absolute/path/to/nodejs/linux/bin/node /absolute/path/to/n8n/node_modules/.bin/n8n
+Restart=always
+User=ubuntu
+Environment=PATH=/usr/bin:/bin:/usr/local/bin
+
+[Install]
+WantedBy=multi-user.target
